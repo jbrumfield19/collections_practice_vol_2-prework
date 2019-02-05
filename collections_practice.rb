@@ -19,3 +19,6 @@ def first_wa(data)
   end
 end
 
+def remove_non_strings(data)
+  data.map { |value| value.class == String ? value : nil}.compact
+end

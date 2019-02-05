@@ -45,3 +45,7 @@ def merge_data(keys, data)
   end
   temp
 end
+
+def find_cool(data)
+  data.map { |person| person[:temperature] == "cool" ? person : nil }.compact
+end

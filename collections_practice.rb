@@ -18,3 +18,4 @@ def first_wa(data)
     end
   end
 end
+

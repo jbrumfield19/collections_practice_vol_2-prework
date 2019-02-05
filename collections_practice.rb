@@ -22,3 +22,15 @@ end
 def remove_non_strings(data)
   data.map { |value| value.class == String ? value : nil}.compact
 end
+
+def count_elements(data)
+  temp = {}
+  data.each do |element|
+    if temp.has_key?(element[:name])
+      temp[element[:name]] += 1
+    else
+      temp[element[:name]] = 1
+    end
+  end
+  temp.map { |k, v| {"name": k, "count": v} }
+end

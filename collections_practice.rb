@@ -34,3 +34,14 @@ def count_elements(data)
   end
   temp.map { |k, v| {"name": k, "count": v} }
 end
+
+def merge_data(keys, data)
+  temp = []
+  data.each do |people|
+    people.each do |firstName, person|
+      person[:first_name] = firstName
+      temp.push (person)
+    end
+  end
+  temp
+end

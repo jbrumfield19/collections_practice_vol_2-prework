@@ -6,3 +6,4 @@ def begins_with_r(array)
   end
   check
 end
+

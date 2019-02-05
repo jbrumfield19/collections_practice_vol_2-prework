@@ -49,3 +49,15 @@ end
 def find_cool(data)
   data.map { |person| person[:temperature] == "cool" ? person : nil }.compact
 end
+
+def organize_schools(schools)
+  organizesSchools = {}
+  schools.each do |name, school_location|
+    if organizesSchools.has_key?(school_location[:location])
+      organizesSchools[school_location[:location]].push(name)
+    else
+      organizesSchools[school_location[:location]] = [name]
+    end
+  end
+  organizesSchools
+end

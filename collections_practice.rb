@@ -11,3 +11,10 @@ def contain_a(data)
   data.map {|value| value.index('a') != nil ? value : nil}.compact
 end
 
+def first_wa(data)
+  data.each do |value|
+    if value.slice(0,2) == "wa"
+      return value
+    end
+  end
+end
